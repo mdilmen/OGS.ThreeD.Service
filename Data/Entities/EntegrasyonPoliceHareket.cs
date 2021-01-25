@@ -9,7 +9,7 @@ namespace OGS.ThreeD.Service.Data.Entities
     {
         public decimal EntegrasyonPoliceHareketId { get; set; }
         public decimal? EntegrasyonPoliceId { get; set; }
-        public decimal? EntegrasyonPoliceLogId { get; set; }
+        public decimal EntegrasyonPoliceLogId { get; set; }
         public decimal? RevizeNo { get; set; }
         public decimal? EskiHareketId { get; set; }
         public string EntegrasyonPoliceNo { get; set; }

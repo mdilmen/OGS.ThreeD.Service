@@ -26,22 +26,26 @@ namespace OGS.ThreeD.Service.Controllers
         {
             try
             {
-                _logger.LogInformation("GetRequestLog Method Called..");
+                
                 var policeLog = _repository.GetLog(id);
                 if (policeLog != null)
                 {
+                    _logger.LogInformation("GetRequestLog Method Called for {Police Hareket Id} {Result}", id,"Success");
                     return Ok(policeLog.RequestXml);
                 }
                 else
                 {
+                    _logger.LogInformation("GetRequestLog Method Called for {Police Hareket Id} {Result}", id, "Not Found");
                     return NotFound();
                 }
                 //return Ok("123123");
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to get the log item {ex}");
+                _logger.LogInformation("GetRequestLog Method Called for {Police Hareket Id} {Result}", id, ex.Message);
+                
             }
+            _logger.LogInformation("GetRequestLog Method Called for {Police Hareket Id} {Result}", id, "Bad Request");
             return BadRequest("Failed to get the log item");
         }
 
