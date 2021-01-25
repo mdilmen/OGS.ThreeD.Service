@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "ConnectionString": "server=10.65.101.10;Database=BrokerExpDB;User Id=hdolek; password=Hd121314; Integrated Security=false;MultipleActiveResultSets=true;"
+  }
+}

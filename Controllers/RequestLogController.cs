@@ -27,16 +27,16 @@ namespace OGS.ThreeD.Service.Controllers
             try
             {
                 _logger.LogInformation("GetRequestLog Method Called..");
-                //var policeLog = _repository.GetLog(id);
-                //if (policeLog != null)
-                //{
-                //    return Ok(policeLog.RequestXml);
-                //}
-                //else
-                //{
-                //    return NotFound();
-                //}
-                return Ok("123123");
+                var policeLog = _repository.GetLog(id);
+                if (policeLog != null)
+                {
+                    return Ok(policeLog.RequestXml);
+                }
+                else
+                {
+                    return NotFound();
+                }
+                //return Ok("123123");
             }
             catch (Exception ex)
             {

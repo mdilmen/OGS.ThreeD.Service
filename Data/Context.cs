@@ -21,13 +21,13 @@ namespace OGS.ThreeD.Service.Data
         public virtual DbSet<EntegrasyonPoliceHareket> EntegrasyonPoliceHarekets { get; set; }
         public virtual DbSet<EntegrasyonPoliceLog> EntegrasyonPoliceLogs { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("server=10.65.101.10;Database=BrokerExpDB;User Id=hdolek; password=Hd121314; Integrated Security=false;MultipleActiveResultSets=true;");
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseSqlServer("server=10.65.101.10;Database=BrokerExpDB;User Id=hdolek; password=Hd121314; Integrated Security=false;MultipleActiveResultSets=true;");
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

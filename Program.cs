@@ -40,9 +40,17 @@ namespace OGS.ThreeD.Service
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSerilog()
+                .ConfigureAppConfiguration(SetupConfiguration)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        private static void SetupConfiguration(HostBuilderContext ctx, IConfigurationBuilder builder)
+        {
+            //throw new NotImplementedException();
+            builder.Sources.Clear();
+            builder.AddJsonFile("config.json", false, true);
+            builder.AddEnvironmentVariables();
+        }
     }
 }
