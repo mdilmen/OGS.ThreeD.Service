@@ -21,7 +21,7 @@ namespace OGS.ThreeD.Service
                     .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
                     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                     .MinimumLevel.Override("System.Net.Http.HttpClient", LogEventLevel.Warning)
-                    .WriteTo.File(new RenderedCompactJsonFormatter(), @"c:/temp/logs/OGS.ThreeD.Service.json")
+                    .WriteTo.File(new RenderedCompactJsonFormatter(), @"c:/temp/logs/OGS3D.Service.json")
             .CreateLogger();
             try
             {

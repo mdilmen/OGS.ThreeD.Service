@@ -39,19 +39,20 @@ namespace OGS.ThreeD.Service
             });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "OGS.ThreeD.Service", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "OGS3D.Service", Version = "v1" });
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
+
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OGS.ThreeD.Service v1"));
-            }
+                app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "OGS3D.Service v1");
+                    
+                });
+
 
             app.UseHttpsRedirection();
 
